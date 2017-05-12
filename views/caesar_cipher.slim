@@ -1,0 +1,17 @@
+div class="container"
+  form class="form-signin" action="/caesar_cipher" method="POST"
+    input id="inputMessage" class="form-control" placeholder="Message" type="text" name="message" required="" autofocus=""
+  
+    input id="inputMessage" class="form-control" placeholder="Offset"type="text" name="offset" required="" 
+
+    button class="btn btn-lg btn-primary btn-block" type="submit"Encrypt!
+
+
+- if message.length > 0
+    br
+    h3 Encrypted Message 
+    p= new_message
+    br
+    h3 Original Message
+    p= message
+    
