@@ -3,3 +3,11 @@ div class="hangman"
   div class="stand"
   div class="stand_top"
   div class="noose"
+
+
+  form class="form-signin" action="/hangman" method="POST"
+    input id="inputMessage" class="form-control" placeholder="Guess" type="text" name="guess" required="" autofocus=""
+    button class="btn btn-lg btn-primary btn-block" type="submit"Guess!
+
+  p= @guess 
+  p no guess?
