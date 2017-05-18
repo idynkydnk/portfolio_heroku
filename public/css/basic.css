@@ -2,7 +2,6 @@ body {
   padding-top: 0px;
   padding-bottom: 40px;
   background-color: #eee;
-  height: 100vh;
 }
 
 p {
@@ -70,17 +69,42 @@ div {
 
 div div {
   background: #A4CA39;
-  position: relative;
+  position: absolute;
 }
 
 .hangman {
   background: #FF0000;
-  height: 100%;
-  width: 100%;
+  height: 80vh;
+  width: 80%;
   margin: auto;
+  overflow: auto;
+  position: relative;
 }
 
 .base {
-  width: 100px;
-  height: 100%;
+  width: 30%;
+  height: 1%;
+  top: 95%;
+  left: 65%;
+}
+
+.stand_top {
+  width: 20%;
+  height: 1%;
+  left: 70%;
+  top: 35%;
+}
+
+.stand {
+  width: 1%;
+  height: 60%;
+  left: 90%;
+  top: 35%;
+}
+
+.noose {
+  width: 1%;
+  height: 5%;
+  left: 70%;
+  top: 35%;
 }
