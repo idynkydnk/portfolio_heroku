@@ -2,6 +2,7 @@ body {
   padding-top: 0px;
   padding-bottom: 40px;
   background-color: #eee;
+  height: 100vh;
 }
 
 p {
@@ -62,8 +63,24 @@ h3 {
   border-top-right-radius: 0;
 }
 
-#base {
-  width: 220px;
-  height: 120px;
-  background: #4da1f7;
+div {
+  margin: 0;
+  padding: 0;
+}
+
+div div {
+  background: #A4CA39;
+  position: relative;
+}
+
+.hangman {
+  background: #FF0000;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.base {
+  width: 100px;
+  height: 100%;
 }
