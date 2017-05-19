@@ -9,5 +9,4 @@ div class="hangman"
     input id="inputMessage" class="form-control" placeholder="Guess" type="text" name="guess" required="" autofocus=""
     button class="btn btn-lg btn-primary btn-block" type="submit"Guess!
 
-  p= @guess 
-  p no guess?
+  p= @session[:guesses] if @session[:guesses].length > 0
