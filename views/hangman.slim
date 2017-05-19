@@ -10,3 +10,4 @@ div class="hangman"
     button class="btn btn-lg btn-primary btn-block" type="submit"Guess!
 
   p= @session[:guesses] if @session[:guesses].length > 0
+  p= @session[:word]
