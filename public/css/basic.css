@@ -68,17 +68,9 @@ h3 {
   text-align: center;
 }
 
-div {
+.hangman {
   margin: 0;
   padding: 0;
-}
-
-div div {
-  background: #A4CA39;
-  position: absolute;
-}
-
-.hangman {
   background: #FF0000;
   height: 80vh;
   width: 80%;
@@ -88,6 +80,8 @@ div div {
 }
 
 .base {
+  background: #A4CA39;
+  position: absolute;
   width: 30%;
   height: 1%;
   top: 95%;
@@ -95,6 +89,8 @@ div div {
 }
 
 .stand_top {
+  background: #A4CA39;
+  position: absolute;
   width: 20%;
   height: 1%;
   left: 70%;
@@ -102,6 +98,8 @@ div div {
 }
 
 .stand {
+  background: #A4CA39;
+  position: absolute;
   width: 1%;
   height: 60%;
   left: 90%;
@@ -109,6 +107,8 @@ div div {
 }
 
 .noose {
+  background: #A4CA39;
+  position: absolute;
   width: 1%;
   height: 5%;
   left: 70%;
