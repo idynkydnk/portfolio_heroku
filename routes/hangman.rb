@@ -18,10 +18,9 @@ get '/hangman' do
 end
 
 post '/hangman' do
-  session[:guess] = params["guess"] 
+  session[:guess] = params["guess"].downcase
   redirect '/hangman'
 end
-
 
 
 def define_the_word
