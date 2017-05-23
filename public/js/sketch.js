@@ -25,7 +25,7 @@ function newGrid(numPerSide){
 	$(".wrapper").empty();		// clears the wrapper div so the function doesn't keep building grid over grid
 
 	if (numPerSide > 10 || numPerSide < 1){			// checks if the number of rows is too high or low.  Sets to default if it is.
-		alert("Keep it between 1 and 100.");
+		alert("Keep it between 1 and 10.");
 		numPerSide = defaultSide;
 	}
 

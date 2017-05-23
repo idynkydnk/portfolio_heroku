@@ -10,13 +10,16 @@ div class="bigwrapper"
 			p 
 				Enter number of boxes per side (1-10):
 			
-			form name="myForm" action="javascript:;" onsubmit="formResults(this)" method="GET"
+			form class="boxform" name="myForm" action="javascript:;" onsubmit="formResults(this)" method="GET"
 				input type="text" name="userEnteredNum" id="userEnteredId" placeholder="5" autofocus=""
-				input type="submit" name="submitButton" value="Reset" id="buttonPress"
 
-			br
-			input type="button" name="rainbowButton" value="Rainbow" id="rainbowButton"
-			input type="button" name="gradientButton" value="Gradient" id="gradientButton"
-			input type="button" name="defaultButton" value="Default" id="defaultButton"
+				input type="submit" name="submitButton" value="Submit" id="buttonPress"
+
+			
+			div class="btn-group"
+				button class="btn btn-lg btn-primary btn-block" type="submit" name="rainbowButton" value="Rainbow" id="rainbowButton"Rainbow
+				button class="btn btn-lg btn-primary btn-block" type="submit" name="gradientButton" value="Gradient" id="gradientButton"Gradient
+				button class="btn btn-lg btn-primary btn-block" type="submit" name="defaultButton" value="Default" id="defaultButton"Default
+
 
 	div class="wrapper"

@@ -136,3 +136,15 @@ h3 {
   width: 100%;
   height: 100%;
 }
+
+.boxform input[type="text"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  text-align: center;
+  width: 50px;
+}
+
+.btn-group button {
+  width: 100px;
+}
