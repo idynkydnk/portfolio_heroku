@@ -137,14 +137,15 @@ h3 {
   height: 100%;
 }
 
+.bigwrapper button {
+  width: 100px;
+  display: inline;
+}
+
 .boxform input[type="text"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   text-align: center;
   width: 50px;
-}
-
-.btn-group button {
-  width: 100px;
 }
