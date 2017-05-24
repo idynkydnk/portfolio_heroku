@@ -110,6 +110,14 @@ h3 {
   top: 35%;
 }
 
+.hangmanWord {
+  font-size: 55px;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
 .gridForm{
   width: 330px;
   margin: 50px auto;

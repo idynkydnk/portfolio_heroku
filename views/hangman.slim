@@ -11,3 +11,6 @@ div class="hangman"
 
   p= @session[:guesses] if @session[:guesses].length > 0
   p= @session[:word]
+
+  div class="hangmanWord"
+  	=@session[:word_display]
