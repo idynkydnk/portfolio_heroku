@@ -1,20 +1,9 @@
 get '/hangman' do
   @session = session
-  define_the_word unless @session[:word]
-  @guess = session.delete(:guess)
-  if @session[:guesses]
-    if @session[:guesses].length < 6
-      @session[:guesses] << @guess unless @guess == nil
-    else
-      session.delete(:guesses)
-      define_the_word
-      @session[:guesses] = []
-    end
+  if @session[:guess]
+    update_board
   else
-    @session[:guesses] = []
-    define_the_word
-    set_word_display
-    session[:guesses] << @guess unless @guess == nil
+    new_game
   end
   slim :hangman
 end
@@ -24,8 +13,32 @@ post '/hangman' do
   redirect '/hangman'
 end
 
+def new_game
+  @session[:guesses] = []
+  define_the_word
+  set_word_display
+end
+
+def update_board
+  @guess = session.delete(:guess)
+  if @session[:guesses].length < 6
+    @session[:guesses] << @guess
+    new_display_word(@guess)
+  else
+    end_game
+  end
+end
+
+def end_game
+  session.delete(:guesses)
+  new_game
+end
+
 def set_word_display
-  @session[:word_display] = "_ _ _ _"
+  @session[:word_display] = ""
+  @session[:word].length.times do |x|
+    @session[:word_display] << "_"
+  end
 end
 
 def define_the_word
@@ -37,6 +50,17 @@ def define_the_word
     @session[:word] = word
   end
 end
+
+def new_display_word guess
+  letter_locations = (0 ... @session[:word].length).find_all { |i| @session[:word][i,1] == @guess }  
+  letter_locations.each do |x|
+    @session[:word_display][x] = @guess
+  end
+end
+
+
+
+
 
 def update_state guesses, guess
   x = 0
@@ -106,7 +130,4 @@ def get_guess
   guess = guess.downcase
 end
 
-def check_guess guess
-  correct_guesses = (0 ... @board.word.length).find_all { |i| @board.word[i,1] == guess }  
-  return correct_guesses
-end
+

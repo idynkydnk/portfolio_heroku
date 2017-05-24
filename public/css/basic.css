@@ -66,7 +66,7 @@ h3 {
 .hangman {
   margin: 0;
   padding: 0;
-  background: #FF0000;
+  background: #585858;
   height: 80vh;
   width: 80%;
   margin: auto;
@@ -75,7 +75,7 @@ h3 {
 }
 
 .base {
-  background: #A4CA39;
+  background: #000000;
   position: absolute;
   width: 30%;
   height: 1%;
@@ -84,7 +84,7 @@ h3 {
 }
 
 .stand_top {
-  background: #A4CA39;
+  background: #000000;
   position: absolute;
   width: 20%;
   height: 1%;
@@ -93,7 +93,7 @@ h3 {
 }
 
 .stand {
-  background: #A4CA39;
+  background: #000000;
   position: absolute;
   width: 1%;
   height: 60%;
@@ -102,7 +102,7 @@ h3 {
 }
 
 .noose {
-  background: #A4CA39;
+  background: #000000;
   position: absolute;
   width: 1%;
   height: 5%;
@@ -116,6 +116,7 @@ h3 {
   top: 25%;
   width: 100%;
   text-align: center;
+  letter-spacing: 30px;
 }
 
 .gridForm{
