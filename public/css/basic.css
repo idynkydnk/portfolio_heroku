@@ -68,7 +68,7 @@ h3 {
   padding: 0;
   background: #585858;
   height: 80vh;
-  width: 80%;
+  width: 90%;
   margin: auto;
   overflow: auto;
   position: relative;
@@ -111,13 +111,15 @@ h3 {
 }
 
 .hangmanWord {
-  font-size: 55px;
+  background: #000000;
+  display: table;
+  font-size: 1.5em;
   position: absolute;
   top: 25%;
-  width: 100%;
-  text-align: center;
-  letter-spacing: 15px;
+  width: 100vw;
+  letter-spacing: 1.5em;
   margin: 0 auto;
+  text-align: center;
 }
 
 .gridForm{
