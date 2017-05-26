@@ -9,7 +9,7 @@ get '/hangman' do
 end
 
 post '/hangman' do
-  session[:guess] = params["guess"].downcase
+  session[:guess] = params["guess"].upcase
   redirect '/hangman'
 end
 
@@ -57,7 +57,7 @@ def define_the_word
   dictionary = File.open("dictionary.txt")
   possible_word = dictionary.readlines.sample.chomp   
   if possible_word.length > 4 && possible_word.length < 13
-    word = possible_word.downcase
+    word = possible_word.upcase
     dictionary.close
     @session[:word] = word
   end

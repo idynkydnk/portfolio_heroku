@@ -13,4 +13,4 @@ div class="hangman"
   p= @session[:word]
 
   div class="hangmanWord"
-  	=@session[:word_display]
+  	=@session[:word_display].gsub(//, '\1 \2')

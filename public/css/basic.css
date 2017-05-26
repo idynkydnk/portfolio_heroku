@@ -74,6 +74,15 @@ h3 {
   position: relative;
 }
 
+.hangmanWord {
+  font-size: 30px;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .base {
   background: #000000;
   position: absolute;
@@ -108,18 +117,6 @@ h3 {
   height: 5%;
   left: 70%;
   top: 35%;
-}
-
-.hangmanWord {
-  background: #000000;
-  display: table;
-  font-size: 1.5em;
-  position: absolute;
-  top: 25%;
-  width: 100vw;
-  letter-spacing: 1.5em;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .gridForm{
