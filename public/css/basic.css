@@ -83,6 +83,17 @@ h3 {
   text-align: center;
 }
 
+.head {
+  font-size: 10em; /* This controls the size. */
+  width: 0.4em;
+  height: 0.4em;
+  border: 0.1em solid red;
+  position: absolute;
+  border-radius: 0.35em;
+  top: 40%;
+  left: 70%;
+
+}
 .hangman_game_over {
   font-size: 50px;
   color: #DD095D;

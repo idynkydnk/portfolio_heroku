@@ -23,3 +23,16 @@ div class="hangman"
       p class="guesses"
         =@session[:chances]
         =" guesses left"
+  -case @session[:chances]
+  -when 5
+    div class="head"
+  -when 4
+    p head and body
+  -when 3
+    p head body arm
+  -when 2
+    p head body arm arm
+  -when 1
+    p haed bod- arm arm leg
+  -when 0
+    p head body arm arm leg leg
