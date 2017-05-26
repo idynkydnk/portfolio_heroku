@@ -14,3 +14,5 @@ div class="hangman"
 
   div class="hangmanWord"
   	=@session[:word_display].gsub(//, '\1 \2')
+    -if @session[:game_over?]
+      =@session[:win?]

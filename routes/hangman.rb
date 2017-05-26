@@ -16,32 +16,32 @@ end
 def new_game
   @session[:guesses] = []
   @session[:chances] = 6
-  @session[:winner?] = false
   define_the_word
   set_word_display
 end
 
 def update_board
   @guess = session.delete(:guess)
+  @session[:game_over?] = false
   if @session[:chances] > 0
     @session[:guesses] << @guess
     new_display_word(@guess)
     if @session[:word_display] == @session[:word]
-      @session[:winner?] = true
-      end_game
+      end_game("win")
     end
     @session[:chances] -= 1
   else
-    end_game
+    end_game("lose")
   end
 end
 
-def end_game
+def end_game(win_or_lose)
   session.delete(:guesses)
-  if @session[:winner?] 
-    puts "you won!!"
+  @session[:game_over?] = true
+  if win_or_lose == "win"
+    @session[:win?] = true
   else
-    puts 'lorts'
+    @session[:win?] = false
   end
   new_game
 end
