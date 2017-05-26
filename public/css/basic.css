@@ -83,6 +83,18 @@ h3 {
   text-align: center;
 }
 
+.hangman_game_over {
+  font-size: 50px;
+  color: #DD095D;
+}
+
+.guesses {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  color: #05AB42;
+}
+
 .base {
   background: #000000;
   position: absolute;

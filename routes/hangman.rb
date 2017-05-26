@@ -23,12 +23,10 @@ end
 def update_board
   @guess = session.delete(:guess)
   @session[:game_over?] = false
-  if @session[:chances] > 0
+  if @session[:chances] > 1
     @session[:guesses] << @guess
     new_display_word(@guess)
-    if @session[:word_display] == @session[:word]
-      end_game("win")
-    end
+    end_game("win") if @session[:word_display] == @session[:word]
     @session[:chances] -= 1
   else
     end_game("lose")
