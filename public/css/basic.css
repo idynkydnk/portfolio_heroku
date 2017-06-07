@@ -83,15 +83,6 @@ h3 {
   text-align: center;
 }
 
-.noose {
-  background: #000000;
-  position: absolute;
-  width: 1%;
-  height: 5%;
-  left: 70%;
-  top: 35%;
-}
-
 .head {
   font-size: 10em; /* This controls the size. */
   width: 0.4em;
@@ -99,8 +90,9 @@ h3 {
   border: 0.1em solid red;
   position: absolute;
   border-radius: 0.35em;
-  top: 100%;
-  left: -210%;
+  top: 40%;
+  left: 70%;
+
 }
 .hangman_game_over {
   font-size: 50px;
@@ -138,6 +130,15 @@ h3 {
   width: 1%;
   height: 60%;
   left: 90%;
+  top: 35%;
+}
+
+.noose {
+  background: #000000;
+  position: absolute;
+  width: 1%;
+  height: 5%;
+  left: 70%;
   top: 35%;
 }
 
