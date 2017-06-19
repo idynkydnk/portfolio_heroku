@@ -3,6 +3,10 @@ div class="hangman"
   div class="stand"
   div class="stand_top"
   div class="noose"
+    div class="man"
+      div class="head"
+      div class="body"
+
 
 
   form class="form-signin" action="/hangman" method="POST"
@@ -25,7 +29,7 @@ div class="hangman"
         =" guesses left"
   -case @session[:chances]
   -when 5
-    div class="head"
+    
   -when 4
     p head and body
   -when 3
