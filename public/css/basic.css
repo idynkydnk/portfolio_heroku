@@ -89,7 +89,6 @@ h3 {
   left: -73px;
   top: 100%;
   position: absolute;
-  background: #fff;
 }
 
 .man .head {
@@ -117,8 +116,8 @@ h3 {
   background: red;
   -webkit-transform: rotate(45deg);
   transform-origin: 0% 0%;
-  top: 90px;
-  left: 73px;
+  top: 100px;
+  left: 74px;
   position: absolute;
 }
 
@@ -128,8 +127,30 @@ h3 {
   background: red;
   -webkit-transform: rotate(-45deg);
   transform-origin: 0% 0%;
-  top: 90px;
-  left: 73px;
+  top: 100px;
+  left: 74px;
+  position: absolute;
+}
+
+.man .left_leg {
+  width: 2px;
+  height: 105px;
+  background: red;
+  -webkit-transform: rotate(-30deg);
+  transform-origin: 0% 0%;
+  top: 255px;
+  left: 74px;
+  position: absolute;
+}
+
+.man .right_leg {
+  width: 2px;
+  height: 105px;
+  background: red;
+  -webkit-transform: rotate(30deg);
+  transform-origin: 0% 0%;
+  top: 255px;
+  left: 74px;
   position: absolute;
 }
 
