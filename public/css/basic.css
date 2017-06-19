@@ -93,15 +93,44 @@ h3 {
 }
 
 .man .head {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border: 2px solid red;
   position: relative;
-  border-radius: 22px 22px;
+  border-radius: 50%;
   margin: auto;
   top: 0%;
   text-align: center;
   line-height: 40px;
+}
+
+.man .body {
+  width: 2px;
+  height: 175px;
+  background: red;
+  margin: auto;
+}
+
+.man .left_arm {
+  width: 2px;
+  height: 85px;
+  background: red;
+  -webkit-transform: rotate(45deg);
+  transform-origin: 0% 0%;
+  top: 90px;
+  left: 73px;
+  position: absolute;
+}
+
+.man .right_arm {
+  width: 2px;
+  height: 85px;
+  background: red;
+  -webkit-transform: rotate(-45deg);
+  transform-origin: 0% 0%;
+  top: 90px;
+  left: 73px;
+  position: absolute;
 }
 
 .hangman_game_over {
