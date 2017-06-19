@@ -157,6 +157,8 @@ h3 {
 .hangman_game_over {
   font-size: 50px;
   color: #DD095D;
+  top: 100px;
+  position: absolute;
 }
 
 .guesses {

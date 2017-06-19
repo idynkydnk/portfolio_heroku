@@ -3,15 +3,6 @@ div class="hangman"
   div class="stand"
   div class="stand_top"
   div class="noose"
-    div class="man"
-      div class="head"
-      div class="body"
-      div class="left_arm"
-      div class="right_arm"
-      div class="left_leg"
-      div class="right_leg"
-
-
 
   form class="form-signin" action="/hangman" method="POST"
     input id="inputMessage" class="form-control" placeholder="Guess" type="text" name="guess" required="" autofocus=""
@@ -22,25 +13,63 @@ div class="hangman"
 
   div class="hangmanWord"
   	=@session[:word_display].gsub(//, '\1 \2')
-    -if @session[:game_over?]
-      -if @session[:win?]
-        p class="hangman_game_over" You won! Play Again!
-      -else
-        p class="hangman_game_over" You lost! Play Again!
+  -if @session[:game_over?]
+    -if @session[:win?]
+      p class="hangman_game_over" You won! Play Again!
     -else
-      p class="guesses"
-        =@session[:chances]
-        =" guesses left"
+      div class="hangmanWord"
+        p class="hangman_game_over" You lost! Play Again!
+      div class="noose"
+        div class="man"
+          div class="head"
+          div class="body"
+          div class="left_arm"
+          div class="right_arm"
+          div class="left_leg"
+          div class="right_leg"
+  -else
+    p class="guesses"
+      =@session[:chances]
+      =" guesses left"
+
   -case @session[:chances]
   -when 5
-    
+    div class="noose"
+      div class="man"
+        div class="head"
   -when 4
-    p head and body
+    div class="noose"
+      div class="man"
+        div class="head"
+        div class="body"
   -when 3
-    p head body arm
+    div class="noose"
+      div class="man"
+        div class="head"
+        div class="body"
+        div class="left_arm"
   -when 2
-    p head body arm arm
+    div class="noose"
+      div class="man"
+        div class="head"
+        div class="body"
+        div class="left_arm"
+        div class="right_arm"
   -when 1
-    p haed bod- arm arm leg
+    div class="noose"
+      div class="man"
+        div class="head"
+        div class="body"
+        div class="left_arm"
+        div class="right_arm"
+        div class="left_leg"
   -when 0
-    p head body arm arm leg leg
+    p class="hangman_game_over" You lost! Play Again!
+    div class="noose"
+      div class="man"
+        div class="head"
+        div class="body"
+        div class="left_arm"
+        div class="right_arm"
+        div class="left_leg"
+        div class="right_leg"

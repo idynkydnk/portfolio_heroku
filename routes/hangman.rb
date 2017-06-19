@@ -29,15 +29,10 @@ def update_board
     end_game("win") if @session[:word_display] == @session[:word]
     unless @session[:word].include?(@guess)
       @session[:chances] -= 1
-      draw_piece
     end
   else
     end_game("lose")
   end
-end
-
-def draw_piece
-  @session[:head] = true
 end
 
 def end_game(win_or_lose)
