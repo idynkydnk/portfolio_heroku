@@ -76,6 +76,7 @@ h3 {
 
 .hangmanWord {
   font-size: 30px;
+  color: red;
   position: absolute;
   width: 100%;
   margin: 0 auto;
@@ -155,16 +156,18 @@ h3 {
 
 .hangman_game_over {
   font-size: 50px;
-  color: #DD095D;
+  color: red;
   top: 100px;
   position: absolute;
 }
 
 .guesses {
-  position: absolute;
-  top: 25%;
-  color: #05AB42;
-  margin: auto;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  color: red;
 }
 
 .base {
