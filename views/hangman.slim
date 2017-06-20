@@ -9,17 +9,9 @@ div class="hangman"
     button class="btn btn-lg btn-primary btn-block" type="submit"Guess!
 
   div class="hangmanWord"
-    -if @session[:guesses].length > 0
-      p
-        ="Guesses:"
-        br
-        =@session[:guesses] 
-        br
-        =@session[:chances]
-        =" guesses left"
-        br
 
     =@session[:word_display].gsub(//, '\1 \2')
+
   -if @session[:game_over?]
     -if @session[:win?]
       p class="hangman_game_over" You won! Play Again!
@@ -35,6 +27,19 @@ div class="hangman"
           div class="left_leg"
           div class="right_leg"
 
+  -if @session[:guesses].length > 0
+    p
+      br 
+      br
+      ="Guesses:"
+      br
+      -@session[:guesses].each do |x|
+        =x
+        =" "
+      br
+      br
+      =@session[:chances]
+      =" guesses left"
 
   -case @session[:chances]
   -when 5
