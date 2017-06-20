@@ -8,11 +8,18 @@ div class="hangman"
     input id="inputMessage" class="form-control" placeholder="Guess" type="text" name="guess" required="" autofocus=""
     button class="btn btn-lg btn-primary btn-block" type="submit"Guess!
 
-  p= @session[:guesses] if @session[:guesses].length > 0
-  p= @session[:word]
-
   div class="hangmanWord"
-  	=@session[:word_display].gsub(//, '\1 \2')
+    -if @session[:guesses].length > 0
+      p
+        ="Guesses:"
+        br
+        =@session[:guesses] 
+        br
+        =@session[:chances]
+        =" guesses left"
+        br
+
+    =@session[:word_display].gsub(//, '\1 \2')
   -if @session[:game_over?]
     -if @session[:win?]
       p class="hangman_game_over" You won! Play Again!
@@ -27,10 +34,7 @@ div class="hangman"
           div class="right_arm"
           div class="left_leg"
           div class="right_leg"
-  -else
-    p class="guesses"
-      =@session[:chances]
-      =" guesses left"
+
 
   -case @session[:chances]
   -when 5
