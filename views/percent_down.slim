@@ -6,9 +6,7 @@ div class="container"
 
 
     br
-    h3 You're down this much
-    p= percent_gain + "%"
-    br
-    h3 You need to gain this much just to break even 
-    p= percent_down + "%"
+    h3 
+    h3= "If you are down " + percent_down + "%," + " you would need to gain " + percent_gain.to_s + "%" + " just to break even."
+
     
